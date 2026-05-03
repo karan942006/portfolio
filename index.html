@@ -525,6 +525,83 @@
     .projects-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; text-align: center; }
   }
+
+  /* ─── MOBILE NAV ─── */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  nav {
+    padding: 14px 5vw;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 5vw;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 100px 5vw 60px;
+  }
+
+  .hero-inner {
+    gap: 2.5rem;
+  }
+
+  .avatar-inner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 70px 5vw;
+  }
+
+  .about-grid {
+    gap: 2rem;
+  }
+
+  .contact-grid {
+    gap: 2rem;
+  }
+
+  .github-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-logo {
+    margin-bottom: 1rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -534,7 +611,10 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-logo">Karan <span>Lingayat</span></div>
-  <ul class="nav-links">
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -870,6 +950,10 @@ function handleSubmit() {
   const msg = document.getElementById('f-msg').value;
   if (!name || !email || !msg) { alert('Please fill all fields.'); return; }
   window.location.href = `mailto:karan942006@gmail.com?subject=Internship Opportunity from ${name}&body=${encodeURIComponent(msg + '\n\nFrom: ' + name + '\nEmail: ' + email)}`;
+}
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
 }
 </script>
 </body>
