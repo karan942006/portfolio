@@ -292,7 +292,18 @@
     cursor: default;
   }
   .skill-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); transform: translateY(-3px); }
-  .skill-icon { font-size: 1.8rem; margin-bottom: 0.7rem; display: block; }
+  .skill-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-icon img {
+  width: 100px;
+  height: 60px;
+}
   .skill-name { font-size: 0.84rem; font-weight: 700; color: var(--text); }
   .skill-level { font-size: 0.71rem; color: var(--muted-light); margin-top: 4px; letter-spacing: 0.02em; }
 
@@ -714,18 +725,111 @@
     <p class="section-desc">Technologies and tools I work with to bring ideas to life.</p>
   </div>
   <div class="skills-grid reveal">
-    <div class="skill-card"><span class="skill-icon">☕</span><div class="skill-name">Java</div><div class="skill-level">Core Language</div></div>
-    <div class="skill-card"><span class="skill-icon">🟣</span><div class="skill-name">Kotlin</div><div class="skill-level">Primary Language</div></div>
-    <div class="skill-card"><span class="skill-icon">🔥</span><div class="skill-name">Firebase</div><div class="skill-level">Backend & DB</div></div>
-    <div class="skill-card"><span class="skill-icon">🤖</span><div class="skill-name">Android Studio</div><div class="skill-level">Primary IDE</div></div>
-    <div class="skill-card"><span class="skill-icon">🐙</span><div class="skill-name">GitHub</div><div class="skill-level">Version Control</div></div>
-    <div class="skill-card"><span class="skill-icon">🗄️</span><div class="skill-name">Databases</div><div class="skill-level">Firebase / SQLite</div></div>
-    <div class="skill-card"><span class="skill-icon">🎨</span><div class="skill-name">UI/UX Design</div><div class="skill-level">Material Design</div></div>
-    <div class="skill-card"><span class="skill-icon">🐍</span><div class="skill-name">Python</div><div class="skill-level">Basics</div></div>
-    <div class="skill-card"><span class="skill-icon">🌐</span><div class="skill-name">Web Dev</div><div class="skill-level">Fundamentals</div></div>
-    <div class="skill-card"><span class="skill-icon">🧩</span><div class="skill-name">Problem Solving</div><div class="skill-level">DSA</div></div>
-    <div class="skill-card"><span class="skill-icon">📋</span><div class="skill-name">AI Prompt Engineer</div><div class="skill-level">Prompting</div></div>
-    <div class="skill-card"><span class="skill-icon">🔐</span><div class="skill-name">App Security</div><div class="skill-level">Encryption</div></div>
+   
+ <div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/java.png" alt="Java" style="width:100px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Java</div>
+  <div class="skill-level">Core Language</div>
+</div>
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/kotlin.png" alt="Kotlin" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Kotlin</div>
+  <div class="skill-level">Primary Language</div>
+</div>
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/firebase.jpg" alt="Firebase" style="width:150px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Firebase</div>
+  <div class="skill-level">Backend & DB</div>
+</div>
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/android.png" alt="Android Studio" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Android Studio</div>
+  <div class="skill-level">Primary IDE</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/github.png" alt="GitHub" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">GitHub</div>
+  <div class="skill-level">Version Control</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/database.png" alt="Databases" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Databases</div>
+  <div class="skill-level">Firebase / SQLite</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/uiux.png" alt="UI/UX Design" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">UI/UX Design</div>
+  <div class="skill-level">Material Design</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/python.png" alt="Python" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Python</div>
+  <div class="skill-level">Basics</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/webdev.png" alt="Web Dev" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Web Dev</div>
+  <div class="skill-level">Fundamentals</div>
+</div>
+
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/problem.png" alt="Problem Solving" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">Problem Solving</div>
+  <div class="skill-level">DSA</div>
+</div>
+
+
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/prompt.png" alt="AI Prompt Engineer" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">AI Prompt Engineer</div>
+  <div class="skill-level">Prompting</div>
+</div>
+
+    
+<div class="skill-card">
+  <span class="skill-icon" style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/security.png" alt="App Security" style="width:50px; height:50px; object-fit:contain;">
+  </span>
+  <div class="skill-name">App Security</div>
+  <div class="skill-level">Encryption</div>
+</div>
   </div>
 </section>
 
@@ -741,7 +845,9 @@
     <!-- CivicTrack -->
     <div class="project-card">
       <div class="project-header">
-        <div class="project-icon">📍</div>
+        <div class="project-icon" style="display:flex; align-items:center; justify-content:center;">
+  <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/CivicTrack.jpeg" alt="CivicTrack" style="width:24px; height:24px; object-fit:contain;">
+</div>
         <div class="project-status">Active</div>
       </div>
       <div class="project-title">CivicTrack</div>
@@ -765,7 +871,9 @@
     <!-- CryptoTalk -->
     <div class="project-card">
       <div class="project-header">
-        <div class="project-icon">🔐</div>
+        <div class="project-icon" style="display:flex; align-items:center; justify-content:center;">
+  <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/CryptoTalk.jpeg" alt="Location" style="width:24px; height:24px; object-fit:contain;">
+</div>
         <div class="project-status">Completed</div>
       </div>
       <div class="project-title">CryptoTalk</div>
