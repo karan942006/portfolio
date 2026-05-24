@@ -1,0 +1,215 @@
+# Karan Lingayat — Android Developer
+
+## Hero Section
+
+**Open to Internship Opportunities**
+
+# Karan Lingayat
+
+**Android Developer | Firebase Enthusiast | Kotlin Developer | Mobile App Builder**
+
+Building smart, secure & scalable Android apps with Android Studio, Kotlin & Firebase.
+
+### Quick Stats
+
+* **2 Projects**
+* **3+ Technologies**
+* **Graduating in 2028**
+
+### Links
+
+* LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/karan-lingayat-066420330?utm_source=chatgpt.com)
+* GitHub: [GitHub Profile](https://github.com/karan942006?utm_source=chatgpt.com)
+
+---
+
+# About Me
+
+I’m an aspiring Android and Web Developer from Maharashtra, India, currently pursuing my B.E. in Computer Science Engineering (Cyber Security) at Finolex Academy of Management & Technology.
+
+I have hands-on experience building real-world Android applications using Java, Kotlin, and Firebase. I’m passionate about creating efficient, user-friendly, and scalable mobile solutions.
+
+From GPS-based attendance systems to end-to-end encrypted messaging apps, I enjoy tackling complex problems with clean code and thoughtful design.
+
+> “Code. Build. Innovate. Repeat.” — My development mantra.
+
+---
+
+# Personal Information
+
+### Location
+
+Devrukh, Ratnagiri, Maharashtra, India
+
+### Focus Area
+
+Android Development & Backend Integration
+
+### Career Goal
+
+Become a top Android Developer contributing to impactful technology solutions.
+
+### Available For
+
+Android Developer Internship (Remote / On-site)
+
+---
+
+# Tech Stack & Skills
+
+## Programming Languages
+
+* Java
+* Kotlin
+* Python (Basics)
+
+## Android Development
+
+* Android Studio
+* Kotlin Development
+* Firebase Integration
+* SQLite Database
+* GPS API Integration
+
+## Web & Design
+
+* Web Development Fundamentals
+* UI/UX Design
+* Material Design
+
+## Development Tools
+
+* GitHub
+* Version Control
+
+## Additional Skills
+
+* Problem Solving (DSA)
+* AI Prompt Engineering
+* App Security & Encryption
+
+---
+
+# Featured Projects
+
+## 1. CivicTrack
+
+**Status:** Active
+
+### Description
+
+CivicTrack is a smart GPS-based attendance tracking system with real-time location verification, Firebase backend integration, and an admin dashboard for monitoring.
+
+### Key Features
+
+* Real-time GPS location tracking for attendance
+* Firebase backend for instant data synchronization
+* Admin dashboard for monitoring and reports
+* Anti-proxy logic for attendance accuracy
+
+### Technologies Used
+
+* Kotlin
+* Android Studio
+* Firebase
+* GPS API
+
+### Project Link
+
+[CivicTrack Project](https://karan942006.github.io/civictrackapp/?utm_source=chatgpt.com)
+
+---
+
+## 2. CryptoTalk
+
+**Status:** Completed
+
+### Description
+
+CryptoTalk is a privacy-focused secure messaging application with end-to-end encryption concepts and a clean, intuitive communication interface.
+
+### Key Features
+
+* End-to-end encryption for secure messaging
+* Privacy-first communication design
+* Clean and minimal UI
+* Firebase real-time database integration
+
+### Technologies Used
+
+* Kotlin
+* Android Studio
+* Firebase
+* Encryption
+* UI/UX Design
+
+### Project Link
+
+[CryptoTalk Project](https://karan942006.github.io/CryptoTalkApp/?utm_source=chatgpt.com)
+
+---
+
+# Education
+
+## Bachelor of Engineering (B.E.)
+
+### Computer Science Engineering (Cyber Security)
+
+**Institution:** Finolex Academy of Management and Technology
+
+**Duration:** August 2024 — May 2028
+
+**Status:** In Progress
+
+---
+
+# GitHub Activity
+
+### GitHub Statistics
+
+* 2+ Projects
+* 5+ Repositories
+* 100% Android-focused Development
+
+### Main Technologies on GitHub
+
+* Kotlin
+* Java
+* Firebase
+* Android
+* Python
+
+### GitHub Profile
+
+[GitHub Portfolio](https://github.com/karan942006?utm_source=chatgpt.com)
+
+---
+
+# Contact Information
+
+## Email
+
+## Phone
+
+## Location
+
+Devrukh, Ratnagiri, Maharashtra, India
+
+## Availability
+
+Open to Internships
+
+---
+
+# Social Links
+
+* [LinkedIn](https://www.linkedin.com/in/karan-lingayat-066420330?utm_source=chatgpt.com)
+* [GitHub](https://github.com/karan942006?utm_source=chatgpt.com)
+*
+
+---
+
+# Footer
+
+© 2025 Karan Lingayat
+Android Developer · Maharashtra, India
