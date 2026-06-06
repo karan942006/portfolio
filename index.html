@@ -120,7 +120,6 @@
     mask-image: radial-gradient(ellipse at center, black 20%, transparent 72%);
   }
 
-  /* Subtle corner decoration */
   .hero-corner {
     position: absolute; top: 140px; right: 6vw;
     width: 340px; height: 340px;
@@ -209,7 +208,6 @@
   }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 
-  /* Avatar */
   .hero-avatar {
     animation: fadeUp 0.8s 0.15s ease both;
     position: relative;
@@ -543,6 +541,107 @@
   .lang-chip:hover { border-color: rgba(26,86,219,0.3); color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-xs); }
   .lang-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
+  /* ─── CERTIFICATES ─── */
+  #certificates { background: var(--bg); border-top: 1px solid var(--border-light); }
+
+  /* ━━━ ADJUSTABLE SIZE — change these two variables to resize all certificate cards ━━━ */
+  :root {
+    --cert-card-width: 320px;   /* card width  — increase/decrease to resize */
+    --cert-img-height: 210px;   /* image height — increase/decrease to resize */
+  }
+
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--cert-card-width), 1fr));
+    gap: 1.4rem;
+    max-width: 1100px;
+  }
+  .cert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .cert-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  .cert-card:hover { border-color: rgba(26,86,219,0.3); box-shadow: var(--shadow-lg); transform: translateY(-6px); }
+  .cert-card:hover::before { transform: scaleX(1); }
+
+  .cert-img-wrap {
+    width: 100%;
+    height: var(--cert-img-height);
+    overflow: hidden;
+    background: var(--bg-alt);
+    position: relative;
+  }
+  .cert-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
+  .cert-card:hover .cert-img-wrap img { transform: scale(1.04); }
+
+  .cert-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(15,17,23,0.55) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 1.2rem;
+  }
+  .cert-card:hover .cert-overlay { opacity: 1; }
+  .cert-overlay-btn {
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  .cert-overlay-btn:hover { background: var(--accent-dark); }
+
+  .cert-body {
+    padding: 1.1rem 1.3rem 1.3rem;
+    flex: 1;
+    display: flex; flex-direction: column; gap: 0.3rem;
+  }
+  .cert-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.97rem; font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+  .cert-issuer {
+    font-size: 0.75rem; color: var(--accent);
+    font-weight: 600; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.03em;
+  }
+  .cert-view-link {
+    margin-top: auto;
+    padding-top: 0.8rem;
+    font-size: 0.79rem; color: var(--accent);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+    font-weight: 600;
+    transition: gap 0.2s;
+  }
+  .cert-view-link:hover { gap: 9px; }
+
   /* ─── CONTACT ─── */
   #contact { background: var(--bg); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; max-width: 1000px; align-items: start; }
@@ -564,7 +663,6 @@
   .contact-val a:hover { color: var(--accent); }
   .availability-val { color: var(--green) !important; }
 
-  /* Form */
   .contact-form {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -605,7 +703,6 @@
   }
   .form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.28); }
 
-  /* Social bar */
   .social-bar { display: flex; gap: 0.7rem; margin-top: 2.2rem; }
   .social-link {
     width: 44px; height: 44px; border-radius: var(--radius-sm);
@@ -678,6 +775,7 @@
     .menu-toggle { display: block; }
     .projects-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; text-align: center; }
+    .certificates-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
   }
 
   @media(max-width: 640px) {
@@ -691,6 +789,7 @@
     .edu-card { flex-direction: column; align-items: flex-start; padding: 1.8rem; }
     .contact-form { padding: 1.5rem; }
     .hero-corner { display: none; }
+    .certificates-grid { grid-template-columns: 1fr; }
 
     .nav-links {
       position: absolute;
@@ -737,6 +836,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#certificates">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1017,6 +1117,109 @@
   </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="reveal">
+    <p class="section-label">Achievements</p>
+    <h2>Certificates</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">Courses, hackathons, and programs I've completed.</p>
+  </div>
+  <div class="certificates-grid reveal">
+
+    <!-- Certificate 1: Basic DSA -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Basic%20DSA.jpg" alt="Basic DSA Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Basic%20DSA.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">Basic Data Structures & Algorithms</div>
+        <div class="cert-issuer">DSA · Fundamentals</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Basic%20DSA.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+    <!-- Certificate 2: InAmigos Foundation -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-InAmigos%20Foundation.jpg" alt="InAmigos Foundation Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-InAmigos%20Foundation.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">InAmigos Foundation</div>
+        <div class="cert-issuer">InAmigos · Program</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-InAmigos%20Foundation.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+    <!-- Certificate 3: Infosys Django Web -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Django%20Web.jpg" alt="Infosys Django Web Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Django%20Web.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">Django Web Development</div>
+        <div class="cert-issuer">Infosys Springboard · Web Dev</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Django%20Web.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+    <!-- Certificate 4: Infosys JavaScript -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Javascript.jpg" alt="Infosys JavaScript Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Javascript.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">JavaScript Programming</div>
+        <div class="cert-issuer">Infosys Springboard · Web Dev</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-Infosys%20Javascript.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+    <!-- Certificate 5: Quantexera Hackathon -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraHackathon.jpg" alt="Quantexera Hackathon Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraHackathon.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">Quantexera Hackathon</div>
+        <div class="cert-issuer">Quantexera · Hackathon</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraHackathon.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+    <!-- Certificate 6: Quantexera Project -->
+    <div class="cert-card">
+      <div class="cert-img-wrap">
+        <img src="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraProject.jpg" alt="Quantexera Project Certificate" loading="lazy">
+        <div class="cert-overlay">
+          <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraProject.jpg" target="_blank" class="cert-overlay-btn">View Certificate ↗</a>
+        </div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-title">Quantexera Project</div>
+        <div class="cert-issuer">Quantexera · Project</div>
+        <a href="https://raw.githubusercontent.com/karan942006/portfolio/refs/heads/main/Certificate-QuantexeraProject.jpg" target="_blank" class="cert-view-link">Open full image →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="reveal">
@@ -1061,9 +1264,9 @@
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         </a>
         <a href="mailto:karan942006@gmail.com" class="social-link" title="Email">✉</a>
-        <a href="https://karan942006.github.io/Resume/" class="social-link" title="Email">
-    <img src="https://raw.githubusercontent.com/karan942006/portfolio/main/resumelogo.png" alt="Resume Logo" style="width: 20px; height: auto; vertical-align: middle;">
-</a>
+        <a href="https://karan942006.github.io/Resume/" class="social-link" title="Resume">
+          <img src="https://raw.githubusercontent.com/karan942006/portfolio/main/resumelogo.png" alt="Resume Logo" style="width: 20px; height: auto; vertical-align: middle;">
+        </a>
       </div>
     </div>
 
